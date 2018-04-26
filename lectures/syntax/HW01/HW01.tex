@@ -1,0 +1,39 @@
+\documentclass[a4paper]{article}
+\usepackage{qtree}
+
+\usepackage[backend=bibtex]{biblatex}
+
+\bibliography{bibliography}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{makecell}
+\usepackage[colorinlistoftodos]{todonotes}
+\setlength{\jot}{0.3cm}
+\usepackage{geometry}
+\usepackage{changepage}
+
+\newcounter{magicrownumbers}
+\newcommand\rownumber{\stepcounter{magicrownumbers}\arabic{magicrownumbers}}
+
+\title{ECL Uni HD - WS17/18 - Exercise Sheet 8}
+
+\author{Wirth, Jan Nikolaus - 4014061}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+%\begin{abstract}
+% Enter a short summary here. What topic do you want to investigate and why? What experiment did you perform? What were your main results and conclusion?
+%\end{abstract}
+\input{ex1.tex}
+\input{ex2.tex}
+\input{ex3.tex}
+\input{ex4.tex}
+
+\printbibliography
+
+\end{document}

@@ -42,5 +42,11 @@ No Constituents
 - neuen Fahrrad
 
 
-Permutation = verschiebungsprobe
-Tilgung = Weglassprobe
+Permutation = verschiebungsprobe = constituents can be moved throughout the sentence structure
+Tilgung = Weglassprobe = constituents can not be left out.
+
+Constituents are Like Phrases but have a head.
+Phrases are named by lexical category.
+Can contain additional Phrasal categories
+
+Nominalphrse
