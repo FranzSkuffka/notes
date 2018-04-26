@@ -288,3 +288,86 @@ differences
 - append and prepend actually simplify the process because there is no special case for double-linked-lists
 
 > A list is essentially a class that allows easy access to the elements linked together, starting at the first element
+
+
+> ## Algos & Data Structures III
+
+- Stack LIFO (n Elements)
+  - create() = makes empty stack 
+  - push(a) = prepend
+  - x = pop() # mutates
+  - y = peek()
+- Queue FIFO (n Elements)
+  - create() = makes empty queue 
+  - push = append
+  - pop = read first
+
+- Heap / Priority Queue (manages set of key/value pairs)
+  - insert(x, key)
+  - getMin(key)
+  - deleteMin(key)
+
+- Dictionary / Map / Assoc Array (manages set of Elements with unique keys)
+  - create(x, key) Create new dictionary
+    - List : O(I)
+    - Array: O(I)
+    - SortedArray: O(I)
+  - insert(x, key) = prepend # overwrites if key exists
+    - List : O(I)
+    - Array: O(I)
+    - SortedArray: O(n)
+  - find(key) # overwrites if key exists
+    - List : O(n)
+    - Array: O(n)
+    - SortedArray: O(log n)
+  - delete(key)
+    - List : O(n)
+    - Array: O(n)
+    - SortedArray: O(n)
+SortedArray allows divide and conquer
+log n complexity is only when the key actually exists.
+
+
+## Sorting
+1/4 of all global computation time
+
+Input:
+- Sequence of n Elements, x_1, ..., x_n
+- Order Relation (e.g. <=)
+Output: by `<=` sorted sequence
+forall i < j => xi <= xj
+
+### Selection Sort
+1. find smallest element
+2. switch to first position
+3. repeat
+
+```
+selectionSort(A):
+  for i = 0 to len(A) - 2 do:
+    # find min in A[i, ..., n-1]
+    # swap A[i] mit min(A[i, ..., n-1])
+```
+
+```python
+def selectionSort(alist):
+  for i in range(len(alist) - 1):
+    least = i
+    for k in range(i + 1, len(alist) -1):
+      if alist[k] < alist[least]
+        least = k
+    tmp = alist[least]
+    alist[least] = alist[i]
+    alist[i] = tmp
+```
+
+```python
+import time
+
+start = time.time()
+# ...
+run_time = (time.time() - start_time) * 1000
+```
+Will result in `f(n) = a + bn + cn^2`
+
+Each loop gives us one exponent - or - one factor with n
