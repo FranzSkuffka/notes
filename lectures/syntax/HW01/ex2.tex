@@ -11,51 +11,66 @@ Geben Sie für die folgenden einfachen Nominalphrasen und Verbalphrasen jeweils
   \item VP: (dass er) dieses Thema aus seinem Kurs gut kennt
 \end{itemize}
 
+\pagebreak
 \Tree[.NP [.NP [.Det die ] [.NP [.Adj neuen ] [.N Geschäfte ] ] ] [.PP [.Prep in ] [.NP [.Det der ] [.N Ladenzeile ] ] ] ]
+\begin{verbatim}
 NP -> Adj N
 NP -> Det N
 NP -> Det NP
 NP -> NP PP
 PP -> Prep NP
+\end{verbatim}
 \vspace{1cm}
 
 \Tree[.NP [.NP [.Adj berühmte ] [.P Hersteller ] ] [.PP [.Prep von ] [.P Sportkleidung ] ] ]
+\begin{verbatim}
 NP -> Adj P
 NP -> NP PP
 PP -> Prep P
+\end{verbatim}
 \vspace{1cm}
 
 \Tree[.NP [.Part sehr ] [.NP [.Adj eingängige ] [.N Musik ] ] ]
+\begin{verbatim}
 NP -> Adj N
 NP -> Part NP
+\end{verbatim}
 \vspace{1cm}
 
 
 \Tree[.AP [.PP [.Prep auf ] [.NP [.Pron seine ] [.N Schwester ] ] ] [.Adj eifersüchtig ]]
+\begin{verbatim}
 
 AP -> PP Adj
 NP -> Pron N
 PP -> Prep NP
+\end{verbatim}
 \Tree[.PP [.Prep unter ] [.NP [.Det der ] [.N Brücke ] ]]
+\begin{verbatim}
 NP -> Det N
 PP -> Prep NP
-\linebreak
+\end{verbatim}
 \vspace{1cm}
 
 \Tree[.PP [.Prep bis ] [.PP [.Prep zur ] [.NP [.Adj nächsten ] [.N Ecke ] ] ] ]
+\begin{verbatim}
 NP -> Adj N
 PP -> Prep NP
 PP -> Prep PP
+\end{verbatim}
 \Tree[.VP [ (weil sie) ] [.VP [.NP [.Det die ] [.N Sache ] ]  [.VP [.Adv klar ] [.V durchschaut ] ] ] ]
+\begin{verbatim}
 NP -> Det N
 VP -> Adv V
 VP -> NP VP
 VP -> VP VP
-\linebreak
+\end{verbatim}
 \Tree[.VP [ (dass er) ] [.NP [.NP [.Det dieses ] [.N Thema ] ] [.PP [.Prep aus ] [.NP [.Pron seinem ]  [.N Kurs ] ] ] ] [.VP [.Adv gut ] [.V kennt ]  ] ]
+\begin{verbatim}
 NP -> Det N
 NP -> NP PP
 NP -> Pron N
 PP -> Prep NP
 VP -> Adv V
 VP -> NP NP
+\end{verbatim}
