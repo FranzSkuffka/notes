@@ -1,0 +1,61 @@
+\subsection{Phrasenstruktur}
+Geben Sie für die folgenden einfachen Nominalphrasen und Verbalphrasen jeweils eine moglichst generelle Konstituentenstruktur und eine entsprechende Phrasenstrukturregel an. Markieren Sie jeweils den Kopf der Phrase.
+\begin{itemize}
+  \item NP: die neuen Geschäfte in der Ladenzeile
+  \item NP: berühmte Hersteller von Sportkleidung
+  \item NP: sehr eingängige Musik
+  \item AP: auf seine Schwester eifersüchtig
+  \item PP: unter der Brücke
+  \item PP: bis zur nächsten Ecke
+  \item VP: (weil sie) die Sache klar durchschaut
+  \item VP: (dass er) dieses Thema aus seinem Kurs gut kennt
+\end{itemize}
+
+\Tree[.NP [.NP [.Det die ] [.NP [.Adj neuen ] [.N Geschäfte ] ] ] [.PP [.Prep in ] [.NP [.Det der ] [.N Ladenzeile ] ] ] ]
+NP -> Adj N
+NP -> Det N
+NP -> Det NP
+NP -> NP PP
+PP -> Prep NP
+\vspace{1cm}
+
+\Tree[.NP [.NP [.Adj berühmte ] [.P Hersteller ] ] [.PP [.Prep von ] [.P Sportkleidung ] ] ]
+NP -> Adj P
+NP -> NP PP
+PP -> Prep P
+\vspace{1cm}
+
+\Tree[.NP [.Part sehr ] [.NP [.Adj eingängige ] [.N Musik ] ] ]
+NP -> Adj N
+NP -> Part NP
+\vspace{1cm}
+
+
+\Tree[.AP [.PP [.Prep auf ] [.NP [.Pron seine ] [.N Schwester ] ] ] [.Adj eifersüchtig ]]
+
+AP -> PP Adj
+NP -> Pron N
+PP -> Prep NP
+\Tree[.PP [.Prep unter ] [.NP [.Det der ] [.N Brücke ] ]]
+NP -> Det N
+PP -> Prep NP
+\linebreak
+\vspace{1cm}
+
+\Tree[.PP [.Prep bis ] [.PP [.Prep zur ] [.NP [.Adj nächsten ] [.N Ecke ] ] ] ]
+NP -> Adj N
+PP -> Prep NP
+PP -> Prep PP
+\Tree[.VP [ (weil sie) ] [.VP [.NP [.Det die ] [.N Sache ] ]  [.VP [.Adv klar ] [.V durchschaut ] ] ] ]
+NP -> Det N
+VP -> Adv V
+VP -> NP VP
+VP -> VP VP
+\linebreak
+\Tree[.VP [ (dass er) ] [.NP [.NP [.Det dieses ] [.N Thema ] ] [.PP [.Prep aus ] [.NP [.Pron seinem ]  [.N Kurs ] ] ] ] [.VP [.Adv gut ] [.V kennt ]  ] ]
+NP -> Det N
+NP -> NP PP
+NP -> Pron N
+PP -> Prep NP
+VP -> Adv V
+VP -> NP NP
