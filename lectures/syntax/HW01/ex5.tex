@@ -1,9 +1,20 @@
 \section{Satzstruktur im Deutschen}
-Bestimmen Sie Konstituenten und ihre Kategorien (nur NP, AP, PP, AdvP und CP für eingebettete Sätze) durch Klammerung, Wortarten durch Subskripte, sofern vorhanden die Funktionen Subjekt und Objekt (als zusätzliches Label der Konstituentenklammer) für die folgenden Sätze.
+Bestimmen Sie Konstituenten und ihre Kategorien (nur NP, AP, PP, AdvP und CP für eingebettete Sätze) durch Klammerung, Wortarten durch Subskripte, sofern vorhanden die Funktioneekt und Objekt (als zusätzliches Label der Konstituentenklammer) für die folgenden Sätze.
 Markieren Sie darüber hinaus für alle Satze die topologischen Felder.
 
+
 \begin{enumerate}
-  \item Er hat den Mann im Schlafanzug begrüßt.
-  \item Hier in der Stadt hat Paul heute das große Buch seiner Freundin sehr feierlich überreicht.
-  \item Regine hat die Frau mit dem Fernglas gesehen. 4. Dass Fritz gelacht hat, bewirkte, dass Paul ging.
+  \item NP, Subj [Er$_{N}$] hat$_{Verb}$ [NP [den$_{Det}$ Mann$_{N}N$] PP [im$_{Präp}$ Schlafanzug$_{N}$]] begrüßt$_{Verb}$.
+  \item AdvP [ Hier$_{Adv}$ [PP[in$_{Prep}$] NP [der$_{Det}$  Stadt$_{N}$]]] hat$_{Verb}$ NP[Paul$_{N}$] AdvP [[ heute$_{Adv}$ ][NP AkkusativObj [das$_{Det}$ NP[große$_{Adj}$ Buch$_{N}$ ]]]] [seiner$_{Pron}$ Freundin$_{N}$] [sehr$_{Adv}$ feierlich$_{Adv}$[ überreicht$_{V}$.
+  \item NP, Subj [Regine$_{N}$ hat$_{V}$] NP[die$_{Det}$ Frau$_{N}$] PP [[mit$_{Prep}$ NP [dem$_{Det}$ Fernglas$_{N}$]] gesehen].$_{V}$
+  \item CP, Subj CP [[Dass$_{Conj}$] [NP [NP [Fritz$_{N}$] VP [gelacht$_{V}$ hat]]],$_{V}$ bewirkte,$_{V}$ CP [[dass$_{Conj}$ Paul$_{N}$ ging]].$_{V}$
 \end{enumerate}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{l|l|l|l}
+	Vorfeld & Linke Klammer & Mittelfeld & Rechte Klammer\\ \hline
+  Er & hat & den Mann im Schlafanzug & begrüßt. \\ \hline
+  Hier in der Stadt & hat & Paul heute das große Buch seiner Freundin sehr feierlich & überreicht. \\ \hline
+  Regine & hat & die Frau mit dem Fernglas & gesehen. \\ \hline
+  Dass Fritz & gelacht hat, & bewirkte, dass Paul ging. & \\ \hline
+\end{tabular}
+}

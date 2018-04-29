@@ -8,9 +8,21 @@ Erstellen Sie für die folgenden Sätze Dependenzstrukturen:
 Falls Sie eine Ambiguität erkennen, geben Sie mehrere Lesarten an.
 
 \vspace{2cm}
-\Tree[.erhielt [.Bekannter ein ] [.von Fritz ] [.aus Frankfurt ] [.Brief einen ] ]
+\Tree[.erhielt [.Brief Einen ] [.Bekannter [.Ein [.Von [.Fritz [.aus Frankfurt ] ] ]]]]
 
 \vspace{2cm}
-\resizebox{\columnwidth}{!}{%
-\Tree[.konnte [.ist Wer verantwortlich [.für [.Schaden den entstandenen ] ] ] nicht [.geklärt werden ] [.mit [.Beteiligten allen ] ] ]
-}
+\Tree[.erhielt [.Brief Einen ] [.Bekannter [.Ein [.aus [.Frankfurt [.Von Fritz ]]]]]]
+
+\vspace{2cm}
+\Tree[.erhielt [.Brief [.Einen [.aus Frankfurt ] ] ] [.Bekannter [.Ein [.Von [.Fritz  ] ]]]]
+
+\vspace{2cm}
+\Tree[.erhielt [.Bekannter Ein ] [.Brief [.Einen [.Von [.Fritz [.aus Frankfurt ] ] ]]]]
+
+\vspace{2cm}
+
+\Tree[.ist [.verantwortlich
+[.wer [.für [.Schaden [.entstandenen den ]]]] 
+[.konnte [.geklärt [.werden [.nicht [.auch [.nach [.Diskussionen langen ]]]
+[.mit [.Beteiligten allen ]]
+]]]]]]
