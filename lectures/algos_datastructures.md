@@ -371,3 +371,7 @@ run_time = (time.time() - start_time) * 1000
 Will result in `f(n) = a + bn + cn^2`
 
 Each loop gives us one exponent - or - one factor with n
+
+## Algo / Data Structures III
+- Bubble sort: O(n^2) - two loops where the higher number below a window of two is moved to the second position
+- Quick sort: split (best at median). Indices L / R are increased / decreased until they exceed median. Then switch.
