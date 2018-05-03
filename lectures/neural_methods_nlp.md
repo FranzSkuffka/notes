@@ -2,22 +2,21 @@
 
 NNs can bring quick results
 
-new thinking with regard to classical procedures for sorting etc.
+new thinking with regard to classic procedures for sorting etc.
 architectures
 methods
 data
 
-
 traing of embedded terms vs related phrases
 
-new architectures that do not match with classical pipelines
+new architectures that do not match with classic pipelines
 
 
 - what are arguments for certains semantic terms
 
 transfer learnings
 traning labeller for semantic roles
-> learned parameters get integrated into the network that lateron
+> learned parameters get integrated into greate networks lateron
 
 
 
@@ -82,3 +81,47 @@ RNNs and CNN have similar performance in sentiment analysis but RNNs are easier 
 - can we trust
 - what are the tipps
 - what is the context
+- 
+# Session II
+Syntax & Semantic Role Labelling
+
+Dependency Labelling -> Semantic Role Labelling
+
+Structured Predictions is more than labeling entities
+
+Dependency -> Transition based / Graph-based
+Constituent -> CYK
+
+Dependencies are similiar across languages -> generality
+
+## Neural Networks
+- classic Shift-reduce
+- sequence-labeling
+- graph-based or relatin based
+
+Dependencies
+1. bilexicas affinities [the -> dog]
+2. dependency distance - usually the distance between head and dependent are usually low
+3. intervening - words in-between
+4. valency  ? 
+
+english is generally an interesting field because it's ambiguous and not-so explicit
+
+RNNs forget to quickly - so we get LSTMs
+CNN are good for pattern recognition
+
+bi-LSTM are nice for temporal data
+
+
+two different variants of LSTM
+- final concatenation
+- in-place concatenation
+
+highway lanes are useful for preventing forgetting
+
+character-based-embeddings can use word-level features like endings to find out relations
+
+Questions
+- width of input is always limited to a window? - yes
+- what are the two diffent types of lstms?
+- highway connections vs LSTM
