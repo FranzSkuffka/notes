@@ -15,6 +15,6 @@ Goal: extend the class of formulae from such facts ( sth(a, b) ) to formulae lik
 QUESTIONS
 - what are canonical relations
 - how can those schemas be completed using matrix factorization
-- what is distant supervision?
-- what are first-order logic formulae
+- what is distant supervision? - OK
+- what are first-order logic formulae OK
 - what are surface patterns / surface-form relations
