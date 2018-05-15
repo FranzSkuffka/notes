@@ -1,0 +1,45 @@
+\documentclass[a4paper]{article}
+\usepackage{qtree}
+
+\usepackage[backend=bibtex]{biblatex}
+
+\bibliography{bibliography}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[colorinlistoftodos]{todonotes}
+\setlength{\jot}{0.3cm}
+\usepackage{geometry}
+\usepackage{changepage}
+\usepackage{avm}
+
+\avmfont{\sc}
+\avmoptions{sorted,active}
+\avmvalfont{\rm}
+\avmsortfont{\scriptsize\it}
+
+
+\newcounter{magicrownumbers}
+\newcommand\rownumber{\stepcounter{magicrownumbers}\arabic{magicrownumbers}}
+\newcommand\arrow{$\rightarrow$}
+\title{FSyn - SS18 - HA02}
+
+\author{Wirth, Jan Nikolaus - 4016061}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+%\begin{abstract}
+% Enter a short summary here. What topic do you want to investigate and why? What experiment did you perform? What were your main results and conclusion?
+%\end{abstract}
+\input{ex1.tex}
+\input{ex2.tex}
+\input{ex3.tex}
+\input{ex4.tex}
+\input{ex5.tex}
+
+\printbibliography
+
+\end{document}

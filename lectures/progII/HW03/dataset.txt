@@ -1,0 +1,11 @@
+id surface   lemma   pos   head rel
+1  Der       der     ART   2    NK
+10 Der       der     ART   2    NK
+2  Mann      Mann    NN    3    SB
+3  hat       haben   VAFIN 0    –
+4  angerufen anrufen VVPP  3    OC
+5  ,         ,       $,    4    –
+6  der       der     PRELS 9    SB
+7  gestern   gestern ADV   9    MO
+8  da        da      ADV   9    MO
+9  war       sein    VAFIN 2    RC

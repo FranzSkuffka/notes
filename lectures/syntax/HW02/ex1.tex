@@ -1,0 +1,51 @@
+\section{ F-Strukturen und Ambiguität}
+
+\begin{avm}
+[{}  pred  & `landet< subj , obj >'     \\
+     tense &  pres                \\
+     subj  &  [{} pred & `Laura']  \\
+     obj   &  [
+     	{} pred & `Helikopter' \\
+     	 spec & `den' \\
+     	]
+     {} adj   &  \{ [
+     	{} pred & `auf' \\
+     	 obj & [
+     		{} pred & `Wiese' \\
+     	 		spec & `der' \\
+     		]
+     	], [
+     	{} pred & `neben' \\
+     	 obj & [
+     		{} pred & `Autobahn' \\
+     	 		spec & `der' \\
+     		]
+     	] \}
+     ]
+\end{avm}
+
+
+\begin{avm}
+[{}  pred  & `landet< subj , obj >'     \\
+     tense &  pres                \\
+     subj  &  [{} pred & `Laura']  \\
+     obj   &  [
+     	{} pred & `Helikopter' \\
+     	 spec & `den' \\
+     	]
+     {} adj   &  \{ [
+     	{} pred & `auf' \\
+     	 obj & [
+     		{} pred & `Wiese' \\
+     	 		spec & `der' \\
+     		] \\
+     	 adj & [
+     		{} pred & `neben' \\
+     		obj & [
+     			{} pred & `Autobahn' \\
+     	 			spec & `der' \\
+     			]
+     		]
+     	],  \}
+     ]
+\end{avm}
