@@ -375,3 +375,41 @@ Each loop gives us one exponent - or - one factor with n
 ## Algo / Data Structures III
 - Bubble sort: O(n^2) - two loops where the higher number below a window of two is moved to the second position
 - Quick sort: split (best at median). Indices L / R are increased / decreased until they exceed median. Then switch.
+
+## III Complexity
+O(g(n)) = { f| elof c > 0, n_0 > 0 forall n >= n0: f(n) <= g(n)}
+f(n) elof O(g(n)) falls es konstanten c>0, n_0 < 0 gibt, sodass f(n) <= c g(n) für alle n >= n_0.
+
+omega(g(n)) = { f | exists c > 0, n_0 > 0  forall n >= n_0: f(n) >= c g(n)}
+Funktion f(n) elof omega(g(n)) falls es konstancen c >0, n0 <0 gibt, sodass f(n) >= (g(n) für alle n <=n)
+f(n) elof O(g(n))
+f(n) wächst asymptotisch nicht schneller als g(n)
+f(n) elof omega(g(n))
+f(n) wächst asymptotosch mindestens so schnell wie g(n)
+
+
+f(n) = O(g(n))
+
+Beispiel
+SelectionSort
+c'n^2 <= T(n) <= c n^2
+T(n) elof O(n^2); T(n) elof omega(n^2)
+T(n) elof theta (n^2)
+
+f(n) = 10n^3
+g(n) = n^3 / 1000
+
+10n^3 <= c * n^3 / 1000
+10n^3 <= c' * n^3 / 1000
+
+f(n) elof theta(g(n))
+f(n) = e ^n; g(n) = n100
+
+f(n) elof omega(g(n))
+
+f(n) = n/log_2n; g(n) = n^1/2
+f(n) elof omega(g(n))
+
+f(n) = n^1/256 g(n) = 10logn
+
+f(n) = log10n; g(n) = log2n
