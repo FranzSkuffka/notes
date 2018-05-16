@@ -21,6 +21,9 @@ public class Token {
   }
 
   public Boolean equals(Token otherToken) {
-    return true;
+    String hashA = this.surface + " " + this.pos + " " + this.lemma;
+    String hashB = otherToken.surface + " " + otherToken.pos + " " + otherToken.lemma;
+    Boolean result = hashA.equals(hashB);
+    return result;
   }
 }
