@@ -413,3 +413,78 @@ f(n) elof omega(g(n))
 f(n) = n^1/256 g(n) = 10logn
 
 f(n) = log10n; g(n) = log2n
+
+
+Algos / Datastructures IV
+Can we get better
+
+Lower bar
+Counting Sort
+
+Every program uses n comparisons
+n comparisons can be use
+
+T = Depth
+2^T leaves
+Depth correlates with the number of comparison operations
+
+T elof omega(n log n)
+
+
+## Counting Sort
+
+Sort int[] of length n
+
+A[i] = x
+
+für alle i elof {0, 1 n-1} A[i] elof {0, k}
+
+
+Pseudocode
+O = Ordnung
+```python
+# k = unique elements
+# n = array length
+counts = new int[k + 1] # O(1)
+for i = 0 to k:  # O(k)
+  counts[i] = 0
+for i = 0 to n - 1 # O(n)
+  counts[A[i]]++
+i = 0
+for j = 0 to k:           # Sum(k)(j=0) counts[j] // sum of all = n elements
+  for l = 0 to counts[j]:
+    A[i] = j
+    i++
+# O(k + n) Total complexity
+```
+
+lower bound = O(n)
+upper bound = O(2n) <- k = n
+
+
+## Radix sort
+Generalized count sort
+Write xi = ai,0 + ai,1 m + ai,2m^2 + ai,3m^3 + ai,k m ^k
+
+m = 10
+1573 = 3 * 10^0, + 7 * 10^ + 5*10^2 + 1*10*3
+
+Algorithmus
+1. Sortwith counting sort from ai,0
+2. sort with count sort from a:1
+
+O(m + n)        O(n) pro counting sort
+m << n (viel kleiner)
+
+x_max : größter zahlenwert
+
+k = [log_m x_max]
+
+Total complexity O(k + n) = O(n log_m x_max) = O(n log_2 xmax / log_2 m)
+
+# SUMMARY
+- Selection Sort, Insertion Sort, Bubble Sort worst case theta(n^2)
+- morge sort worst case theta(n log n)
+- Quicksort worst case O(n^2) average case O(n log n)
+- radix sort worst case O(n log n)
+- lower bar f comparison-based algorithms = omega(n log n)
