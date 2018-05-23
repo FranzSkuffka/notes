@@ -488,3 +488,9 @@ Total complexity O(k + n) = O(n log_m x_max) = O(n log_2 xmax / log_2 m)
 - Quicksort worst case O(n^2) average case O(n log n)
 - radix sort worst case O(n log n)
 - lower bar f comparison-based algorithms = omega(n log n)
+
+## Master Theorem
+T(n) = a * T(n/b) + f(n)
+- n / b = size of each subproblem
+- a = number of subproblem in the recursion
+- f(n) = size of work tb done outside the recursion
