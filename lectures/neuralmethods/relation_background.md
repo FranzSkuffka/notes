@@ -34,7 +34,6 @@ matrix factorization requires facts
 those facts are generated / completed from existing knowledge using first-order logic
 
 ## Comparison
-
 - Pre - pre-factorization inference
 - Joint - join-optimzation
 - inf - pure logical inference
@@ -46,3 +45,7 @@ Joint means that while doing the matirx factorization, we use logic formulae to 
 
 TODO
 - take a look at AdaGrad, Freebase Relations
+- learning graph represantation
+- matrix decomposition works through minimizing a loss
+  - how can the algorithm be improved with FOLF
+  - what is the loss optimization in this point
