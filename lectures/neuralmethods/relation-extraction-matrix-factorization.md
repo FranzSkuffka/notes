@@ -20,17 +20,25 @@
 
 ## Suggestion: Universal Schema
 - union of all source schema
-	- original input forms (like openIE)
-	- reliations from structured 
-	
-	- learns asyme
-	- probabilistically fill in inferred, unobserved relations
-	- operation on struct- and non-struct data allows to reason about both in mutually-supporting ways
-		- predicted surface-pattern relations support freebase relation prediction
-	
-	
-QUESTIONS:
+  - original input forms (like openIE)
+  - reliations from structured 
+  - probabilistically fill in inferred, unobserved relations
+  - operation on struct- and non-struct data allows to reason about both in mutually-supporting ways
+    - predicted surface-pattern relations support freebase relation prediction
+
+## New method
+unification in matrix
+logistic function with natural parameter for a relation and a tuple
+natural parameter is just the dot product of two vector representations
+like generalized PCA
+
+TODOS
+- read collins
+- read nickel et al for factorization
+
+ QUESTIONS:
 - what do freebase relations look like
+  - surface form patterns
 - what means "unlimited set of relations (due to surface forms)"
 	- surface form = raw text / language, which is infinite
 - why is labelling difficult
@@ -42,3 +50,12 @@ QUESTIONS:
 - what is predicting source data?
 - what is semantic equivalence
 	- why is it illusive?
+- what is penalty
+  - quadratic penalty
+- what is a latent feature vector
+  - matrix-factorized (hidden) vector of input features
+- what does the dot-product formula mean
+- why can the neighborhood model not use synergies
+- why does the neighborhood model not include any parameters from the tuple itself?
+  - the tuple parameter is given because we use only observed facts
+- what is stochastic gradient descent
