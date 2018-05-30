@@ -8,7 +8,7 @@ import java.util.*;
  *  Reads parse trees (Node objects) from  file and returns an iterator over the Nodes
  *  
  *  @author ruppenhofer, building on:
- *     @author ks spreyer@cl.uni-heidelberg.de
+ *  @author ks spreyer@cl.uni-heidelberg.de
  */
 public class NodeReader {
 
@@ -17,28 +17,32 @@ public class NodeReader {
     private Node nextNode;
     
     public NodeReader( Reader in ) {
-    this.br = new BufferedReader( in );
-    this.hasMore = true;
-    computeNextNode();
+        this.br = new BufferedReader( in );
+        this.hasMore = true;
+        computeNextNode();
     }
 
-    public Node next() {
-    Node nt = this.nextNode;
-    computeNextNode();
-    return nt;
-    }
+    public Node next()
+  {
+
+        Node nt = this.nextNode;
+        computeNextNode();
+        return nt;
+
+  }
+
 
     public boolean hasNext() {
-    return this.hasMore;
+      return this.hasMore;
     }
 
     public void close() {
-    try {
-        this.br.close();
-    } catch ( IOException e ) {
-        System.err.println(e.getMessage());
-        System.exit(1);
-    }
+      try {
+          this.br.close();
+      } catch ( IOException e ) {
+          System.err.println(e.getMessage());
+          System.exit(1);
+      }
     }
 
 
@@ -54,24 +58,35 @@ public class NodeReader {
     */
 
     private void computeNextNode ( ){
-    // <your implementation here>
+      System.out.println("COMPUTING NEXT NODE");
+      try {
+        System.out.println("TRYING");
+        String line = this.br.readLine();
+        if (line == null) {
+          this.hasMore = false;
+        } else {
+          this.hasMore = true;
+          this.nextNode = new Node(line);
+        }
+      } catch ( IOException e ) {}
     }
 
 
     public static void main( String[] args ) {
 
-    try {
+      try {
 
-        FileReader in = new FileReader( args[0] );
-        NodeReader nr = new NodeReader(in);
-        while ( nr.hasNext() ) {
-        System.out.println("PARSE " + nr.next() );
-        }
-        nr.close();
-    } catch ( IOException e ) {
-        System.err.println( e.getMessage() );
-        System.exit(1);
-    }
+          FileReader in = new FileReader( args[0] );
+          NodeReader nr = new NodeReader(in);
+          while ( nr.hasNext() ) {
+          System.out.println("NEXT " + nr.hasNext() );
+          System.out.println("PARSE " + nr.next() );
+          }
+          nr.close();
+      } catch ( IOException e ) {
+          System.err.println( e.getMessage() );
+          System.exit(1);
+      }
     }
 
 }
