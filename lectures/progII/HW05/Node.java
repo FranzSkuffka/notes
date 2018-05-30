@@ -62,10 +62,12 @@ public class Node {
 		String s2b  = "S:(NE:Hans VP:( RP:slowly VVFIN:jumps PP:( APPR:over NP:( ART:the ADJA:lazy NN:dog ) ) ) )";
 		String s3 = " NE:Hans VP:(VVFIN:liebt) ";
 		String s4 = " VP:( VVFIN:liebt NE:Maria ) ";
+		String s5 = " VP:(  VVFIN:liebt VP:( VVFIN:liebt ) NE:Maria ) ";
 		String t1 = "NE:Hans";
 		String t2 = "NE";
+		String t3 = "NE:Hans NE:Tim";
 		// choose input
-		String input = t2;
+		String input = s5;
 		// NB: we remove white space
 		StringBuilder sb = new StringBuilder( input.trim());
 
