@@ -1,4 +1,4 @@
-
+package de.uniheidelberg.cl.prog2.node;
 
 /**
 * We want to be able to parse input of the following types into Node etc objects:
