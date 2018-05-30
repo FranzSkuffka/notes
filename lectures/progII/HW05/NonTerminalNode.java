@@ -44,12 +44,19 @@ public class NonTerminalNode extends Node {
         }
 
         if (closingParens > 0 && closingParens >= openingParens) {
-          String[] res = {
-            new String(Arrays.copyOfRange(ch, 0, i)),
-            new String(Arrays.copyOfRange(ch, i, ch.length - 1))
-          };
-          System.out.println("returning " + res[0]);
-          return res;
+          if (i + 1 == ch.length) {
+            String[] res = {
+              new String(Arrays.copyOfRange(ch, 0, i)),
+              ""
+            };
+            return res;
+          } else {
+            String[] res = {
+              new String(Arrays.copyOfRange(ch, 0, i)),
+              new String(Arrays.copyOfRange(ch, i + 2, ch.length + 1))
+            };
+            return res;
+          }
         }
       }
       return null;
@@ -59,13 +66,10 @@ public class NonTerminalNode extends Node {
       return Pattern.compile( ".*\\(.*" ).matcher( str ).matches();
     }
 
-    public static String join(String delim, String[] str) {
+    public static String join(String[] str) {
       String res = "";
-      if (str.length > 0) {
-        res = str[0];
-        for(int i=1;i<str.length;i++){
-          res += delim + str[i];
-        }
+      for(int i=0;i<str.length;i++){
+        res += " " + str[i];
       }
       return res;
     }
@@ -80,17 +84,15 @@ public class NonTerminalNode extends Node {
         // if a token has a paren, it's expected to be a NTnode
         if (containsParen(maybeToken)) {
           // get the content of our NTnode except the tokens already processed
-          String rest = join(" ", Arrays.copyOfRange(innerTokens, i, innerTokens.length - 1));
+          String rest = join(Arrays.copyOfRange(innerTokens, i, innerTokens.length));
           String[] partitionedRest = findContentByParen(rest, 0);
           StringBuilder rawNTNode = new StringBuilder(partitionedRest[0] + ")");
-          children.add(NonTerminalNode.parse(rawNTNode));
           ArrayList<Node> restNodes = parseInner(partitionedRest[1] + ")");
-            System.out.println(partitionedRest);
+          children.add(NonTerminalNode.parse(rawNTNode));
           for(int j=0;j<restNodes.size();j++){
-            System.out.println(restNodes.get(j));
             children.add(restNodes.get(j));
           }
-          children.add(NonTerminalNode.parse(rawNTNode));
+          break;
         } else {
           children.add(TerminalNode.parse(new StringBuilder(maybeToken)));
         }
@@ -103,8 +105,11 @@ public class NonTerminalNode extends Node {
     Matcher m = Pattern.compile( "\\s*([^\\s:()]+):\\(\\s*(.+)\\s*" ).matcher( nodeRepr );
     if (m.matches() && m.groupCount() == 2) { // both label and children matched
       String label = m.group(1); // already got the label
+      // parse children
       ArrayList<Node> children = parseInner(m.group(2));
+      // remove unparseable stuff
       children.removeAll(Collections.singleton(null));
+      // return new instance
       return new NonTerminalNode(label, children);
     }
 

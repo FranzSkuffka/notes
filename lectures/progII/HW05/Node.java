@@ -55,6 +55,16 @@ public class Node {
 		return n;
 	}
 
+	private static void test(String input) {
+
+		System.err.println("");
+		System.err.println("parsing input: " + input );
+		// NB: we remove white space
+		StringBuilder sb = new StringBuilder( input.trim());
+
+		System.err.println("parsed node:   " + Node.parse( sb ) );
+	}
+
 	public static void main( String[] args ) {
     	// These are some test trees similar to what's in the parse-trees.txt file.
 		String s1 =  "S:( NE:Hans VP:( VVFIN:liebt NE:Maria ) )";
@@ -66,13 +76,15 @@ public class Node {
 		String t1 = "NE:Hans";
 		String t2 = "NE";
 		String t3 = "NE:Hans NE:Tim";
-		// choose input
-		String input = s5;
-		// NB: we remove white space
-		StringBuilder sb = new StringBuilder( input.trim());
-
-		System.err.println("parsed node: " + Node.parse( sb ) );
-
+		test(s1);
+		test(s2b);
+		test(s2);
+		test(s3);
+		test(s4);
+		test(s5);
+		test(t1);
+		test(t2);
+		test(t3);
 	}
 
 }
