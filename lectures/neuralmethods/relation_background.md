@@ -29,6 +29,18 @@ QUESTIONS
  - is Table 2 labelled incorrectly?
 - what is zero-shot learning - unseen classed used in the testing set
 
+TODO
+- take a look at AdaGrad, Freebase Relations
+- learning graph represantation
+- matrix decomposition works through minimizing a loss
+  - how can the algorithm be improved with FOLF
+  - what is the loss optimization in this point
+  - 
+Questions towards Frank
+- is this actually matrix factorization
+
+- are there any negative facts?
+- hwo are the universal rules created
 ## The relation between matrix factorization and logic
 matrix factorization requires facts
 those facts are generated / completed from existing knowledge using first-order logic
@@ -42,10 +54,3 @@ those facts are generated / completed from existing knowledge using first-order 
 
 Joint means that while doing the matirx factorization, we use logic formulae to extend existing facts from a sparse training matrix to low-rank logic embeddings
 
-
-TODO
-- take a look at AdaGrad, Freebase Relations
-- learning graph represantation
-- matrix decomposition works through minimizing a loss
-  - how can the algorithm be improved with FOLF
-  - what is the loss optimization in this point

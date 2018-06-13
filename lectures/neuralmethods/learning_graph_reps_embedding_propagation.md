@@ -75,6 +75,7 @@ The loss function can lead to everything being the same
 - composition function = average vector
 - loss function = hinge loss
   - the distance of my context to myself must be lower than anyone to my context
+ 
 ## Formal Analysis
 - Graph G = (V, E)
 - k different label types
@@ -85,12 +86,12 @@ The loss function can lead to everything being the same
 
 - k, lab_max, deg_max is constant
 hinge loss is actually squared when 
+
 ## Results
 - transductive vs inductive (inductive = training without test nodes)
   - for training sets without node attribs this is like zero-shot
+
 ## Closing notes
-
-
 - why is sparsity bad
 
 ## Presentation styles
