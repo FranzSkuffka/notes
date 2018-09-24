@@ -1,0 +1,7 @@
+Berg Mount_Everest Nanga_Parbat Mont_Blanc Himalaya Alpen
+Berg Mount_Everest
+Berg Nanga_Parbat
+Berg Mont_Blanc
+Himalaya Mount_Everest
+Himalaya Nanga_Parbat
+Alpen Mont_Blanc
